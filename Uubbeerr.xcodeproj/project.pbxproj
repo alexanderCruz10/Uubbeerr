@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35031E4528CE98E9000C2948 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35031E4428CE98E9000C2948 /* Extensions.swift */; };
 		35031E4728CEAC3A000C2948 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35031E4628CEAC3A000C2948 /* AuthButton.swift */; };
+		35031E4928CEB6D7000C2948 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35031E4828CEB6D7000C2948 /* SignUpController.swift */; };
 		3534922328CD788C009D3668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534922228CD788C009D3668 /* AppDelegate.swift */; };
 		3534922528CD788C009D3668 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534922428CD788C009D3668 /* SceneDelegate.swift */; };
 		3534922A28CD788C009D3668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3534922828CD788C009D3668 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		35031E4428CE98E9000C2948 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		35031E4628CEAC3A000C2948 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		35031E4828CEB6D7000C2948 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		3534921F28CD788C009D3668 /* Uubbeerr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uubbeerr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3534922228CD788C009D3668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3534922428CD788C009D3668 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3534923C28CD7EA3009D3668 /* LoginController.swift */,
+				35031E4828CEB6D7000C2948 /* SignUpController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				3534922328CD788C009D3668 /* AppDelegate.swift in Sources */,
 				3534922528CD788C009D3668 /* SceneDelegate.swift in Sources */,
 				35031E4528CE98E9000C2948 /* Extensions.swift in Sources */,
+				35031E4928CEB6D7000C2948 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

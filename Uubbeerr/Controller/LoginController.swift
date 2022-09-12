@@ -45,7 +45,7 @@ class LoginController: UIViewController{
         let button = AuthButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        //button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
         return button
     }()
     
@@ -55,7 +55,7 @@ class LoginController: UIViewController{
         
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
         
-        //button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
@@ -66,10 +66,39 @@ class LoginController: UIViewController{
         configureUI()
     }
     
+    
+    
+    @objc func handleShowSignUp(){
+        let controller = SignUpController()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func handleShowLogin(){
+       
+        /*guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        Auth.auth().signIn(withEmail: email,password: password) { result, error in
+            if let error = error {
+                print("DEBUG: Failed to log user in with error \(error.localizedDescription)")
+                return
+            }
+            
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else {
+                return
+            }
+            
+            controller.configureUI()
+            self.dismiss(animated: true, completion: nil)
+        }*/
+        
+        print(123)
+    }
+    
     // MARK: - Functions
     func configureUI(){
         
-        //configureNavBar()
+        configureNavBar()
         
         view.backgroundColor = .backgroundColor
         
@@ -89,5 +118,10 @@ class LoginController: UIViewController{
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
+    }
+    
+    func configureNavBar(){
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
     }
 }

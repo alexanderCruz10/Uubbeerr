@@ -20,6 +20,8 @@
 		356B6F3B28D0119900181DD0 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3A28D0119900181DD0 /* LocationInputActivationView.swift */; };
 		356B6F3D28D01C2900181DD0 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3C28D01C2900181DD0 /* LocationInputView.swift */; };
 		356B6F3F28D026F500181DD0 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3E28D026F500181DD0 /* LocationCell.swift */; };
+		356B6F4128D038F800181DD0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F4028D038F800181DD0 /* Service.swift */; };
+		356B6F4328D043AF00181DD0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F4228D043AF00181DD0 /* User.swift */; };
 		3583594B28CFF58700D6C597 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3583594A28CFF58700D6C597 /* GoogleService-Info.plist */; };
 		38920C6186003C104D426DD9 /* Pods_Uubbeerr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370F1B78B24C4C2D39BE107C /* Pods_Uubbeerr.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		356B6F3A28D0119900181DD0 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
 		356B6F3C28D01C2900181DD0 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		356B6F3E28D026F500181DD0 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		356B6F4028D038F800181DD0 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		356B6F4228D043AF00181DD0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3583594A28CFF58700D6C597 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		370F1B78B24C4C2D39BE107C /* Pods_Uubbeerr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uubbeerr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CEFA83441037EA5BD7F547 /* Pods-Uubbeerr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uubbeerr.debug.xcconfig"; path = "Target Support Files/Pods-Uubbeerr/Pods-Uubbeerr.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		3534923728CD7D67009D3668 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				356B6F4028D038F800181DD0 /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 		3534923A28CD7D7E009D3668 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				356B6F4228D043AF00181DD0 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +285,8 @@
 				3534922528CD788C009D3668 /* SceneDelegate.swift in Sources */,
 				35031E4528CE98E9000C2948 /* Extensions.swift in Sources */,
 				356B6F3B28D0119900181DD0 /* LocationInputActivationView.swift in Sources */,
+				356B6F4328D043AF00181DD0 /* User.swift in Sources */,
+				356B6F4128D038F800181DD0 /* Service.swift in Sources */,
 				35031E4928CEB6D7000C2948 /* SignUpController.swift in Sources */,
 				356B6F3F28D026F500181DD0 /* LocationCell.swift in Sources */,
 			);

@@ -21,15 +21,26 @@ class HomeController: UIViewController{
     private let locationInputView = LocationInputView()
     private let tableView = UITableView()
     private let locationInputViewHeight : CGFloat = 200
+    private var user:User?{
+        didSet{
+            locationInputView.user = user
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         checkIfUserIsLoggedIn()
         enableLocationService()
+        fetchUserData()
         //signOut()
     }
     
+    func fetchUserData(){
+        Service.shared.fetchData { user in
+            self.user = user
+        }
+    }
     func checkIfUserIsLoggedIn(){
         
         if Auth.auth().currentUser?.uid == nil{

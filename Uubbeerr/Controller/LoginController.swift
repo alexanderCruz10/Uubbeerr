@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController{
     
@@ -75,7 +76,7 @@ class LoginController: UIViewController{
     
     @objc func handleShowLogin(){
        
-        /*guard let email = emailTextField.text else { return }
+        guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
         Auth.auth().signIn(withEmail: email,password: password) { result, error in
@@ -84,15 +85,12 @@ class LoginController: UIViewController{
                 return
             }
             
-            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else {
-                return
-            }
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController
+            else{ return}
             
             controller.configureUI()
             self.dismiss(animated: true, completion: nil)
-        }*/
-        
-        print(123)
+        }
     }
     
     // MARK: - Functions

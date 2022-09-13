@@ -16,9 +16,13 @@
 		3534922C28CD788D009D3668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3534922B28CD788D009D3668 /* Assets.xcassets */; };
 		3534922F28CD788D009D3668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3534922D28CD788D009D3668 /* LaunchScreen.storyboard */; };
 		3534923D28CD7EA3009D3668 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534923C28CD7EA3009D3668 /* LoginController.swift */; };
+		356B6F3928CFFF1F00181DD0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3828CFFF1F00181DD0 /* HomeController.swift */; };
+		3583594B28CFF58700D6C597 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3583594A28CFF58700D6C597 /* GoogleService-Info.plist */; };
+		38920C6186003C104D426DD9 /* Pods_Uubbeerr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370F1B78B24C4C2D39BE107C /* Pods_Uubbeerr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A2EB314EC49078441B76959 /* Pods-Uubbeerr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uubbeerr.release.xcconfig"; path = "Target Support Files/Pods-Uubbeerr/Pods-Uubbeerr.release.xcconfig"; sourceTree = "<group>"; };
 		35031E4428CE98E9000C2948 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		35031E4628CEAC3A000C2948 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		35031E4828CEB6D7000C2948 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -30,6 +34,10 @@
 		3534922E28CD788D009D3668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3534923028CD788D009D3668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3534923C28CD7EA3009D3668 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		356B6F3828CFFF1F00181DD0 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		3583594A28CFF58700D6C597 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		370F1B78B24C4C2D39BE107C /* Pods_Uubbeerr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uubbeerr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CEFA83441037EA5BD7F547 /* Pods-Uubbeerr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uubbeerr.debug.xcconfig"; path = "Target Support Files/Pods-Uubbeerr/Pods-Uubbeerr.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38920C6186003C104D426DD9 /* Pods_Uubbeerr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +57,8 @@
 			children = (
 				3534922128CD788C009D3668 /* Uubbeerr */,
 				3534922028CD788C009D3668 /* Products */,
+				83BD11E0C5EDFAA9FC77D0ED /* Pods */,
+				AD033DB054A360EE2118F7F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +84,7 @@
 				3534922B28CD788D009D3668 /* Assets.xcassets */,
 				3534922D28CD788D009D3668 /* LaunchScreen.storyboard */,
 				3534923028CD788D009D3668 /* Info.plist */,
+				3583594A28CFF58700D6C597 /* GoogleService-Info.plist */,
 			);
 			path = Uubbeerr;
 			sourceTree = "<group>";
@@ -97,6 +109,7 @@
 			children = (
 				3534923C28CD7EA3009D3668 /* LoginController.swift */,
 				35031E4828CEB6D7000C2948 /* SignUpController.swift */,
+				356B6F3828CFFF1F00181DD0 /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,6 +129,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		83BD11E0C5EDFAA9FC77D0ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59CEFA83441037EA5BD7F547 /* Pods-Uubbeerr.debug.xcconfig */,
+				1A2EB314EC49078441B76959 /* Pods-Uubbeerr.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD033DB054A360EE2118F7F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				370F1B78B24C4C2D39BE107C /* Pods_Uubbeerr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3534923328CD788D009D3668 /* Build configuration list for PBXNativeTarget "Uubbeerr" */;
 			buildPhases = (
+				9208D304A2ABD8BFD57D08D8 /* [CP] Check Pods Manifest.lock */,
 				3534921B28CD788C009D3668 /* Sources */,
 				3534921C28CD788C009D3668 /* Frameworks */,
 				3534921D28CD788C009D3668 /* Resources */,
+				24EA2F7AB922A36D94182178 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,12 +207,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				3534922F28CD788D009D3668 /* LaunchScreen.storyboard in Resources */,
+				3583594B28CFF58700D6C597 /* GoogleService-Info.plist in Resources */,
 				3534922C28CD788D009D3668 /* Assets.xcassets in Resources */,
 				3534922A28CD788C009D3668 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24EA2F7AB922A36D94182178 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Uubbeerr/Pods-Uubbeerr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Uubbeerr/Pods-Uubbeerr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Uubbeerr/Pods-Uubbeerr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9208D304A2ABD8BFD57D08D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Uubbeerr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3534921B28CD788C009D3668 /* Sources */ = {
@@ -189,6 +264,7 @@
 			files = (
 				3534923D28CD7EA3009D3668 /* LoginController.swift in Sources */,
 				35031E4728CEAC3A000C2948 /* AuthButton.swift in Sources */,
+				356B6F3928CFFF1F00181DD0 /* HomeController.swift in Sources */,
 				3534922328CD788C009D3668 /* AppDelegate.swift in Sources */,
 				3534922528CD788C009D3668 /* SceneDelegate.swift in Sources */,
 				35031E4528CE98E9000C2948 /* Extensions.swift in Sources */,
@@ -334,6 +410,7 @@
 		};
 		3534923428CD788D009D3668 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59CEFA83441037EA5BD7F547 /* Pods-Uubbeerr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +438,7 @@
 		};
 		3534923528CD788D009D3668 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2EB314EC49078441B76959 /* Pods-Uubbeerr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

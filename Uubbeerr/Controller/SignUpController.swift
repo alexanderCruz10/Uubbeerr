@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpController:UIViewController{
     
@@ -88,7 +89,6 @@ class SignUpController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // view.backgroundColor = .red
         configureUI()
     }
     
@@ -101,8 +101,7 @@ class SignUpController:UIViewController{
     
     @objc func handleSignUp(){
        
-        print(123)
-        /*guard let email = emailTextField.text else { return }
+        guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let fullname = fullNameTextField.text else { return }
         let accountTypeIndex = accountTypeSegmentedControl.selectedSegmentIndex
@@ -121,7 +120,7 @@ class SignUpController:UIViewController{
                           "accountType": accountTypeIndex] as [String : Any]
             
             Database.database().reference().child("users").child(uid).updateChildValues(values) { error, ref in
-                
+               
                 guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else {
                     return
                 }
@@ -129,8 +128,7 @@ class SignUpController:UIViewController{
                 controller.configureUI()
                 self.dismiss(animated: true, completion: nil)
             }
-        }*/
-        
+        }
     }
     
     // MARK: - Functions

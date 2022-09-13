@@ -7,10 +7,13 @@
 
 import UIKit
 import Firebase
+import GeoFire
 
 class SignUpController:UIViewController{
     
     // MARK: - Properties
+    
+    private var location = LocationHandler.shared.locationManager.location
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -89,7 +92,11 @@ class SignUpController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureUI()
+        
+        print("DEBUG: Location is: \(location)")
+        
     }
     
     
@@ -115,19 +122,26 @@ class SignUpController:UIViewController{
             }
             guard let uid = result?.user.uid else { return }
             
+            
+            
+            
             let values = ["email": email,
                           "fullname": fullname,
                           "accountType": accountTypeIndex] as [String : Any]
             
-            Database.database().reference().child("users").child(uid).updateChildValues(values) { error, ref in
-               
-                guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else {
-                    return
-                }
+            if accountTypeIndex == 1{
                 
-                controller.configureUI()
-                self.dismiss(animated: true, completion: nil)
+                let geoFire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
+                guard let location = self.location else {return}
+                
+                geoFire.setLocation(location, forKey: uid) { error in
+                    //do stuff
+                    self.updateUserDataAndShowHomeController(uid: uid, values: values)
+                }
             }
+            
+            self.updateUserDataAndShowHomeController(uid: uid, values: values)
+            
         }
     }
     
@@ -154,5 +168,16 @@ class SignUpController:UIViewController{
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.centerX(inView: view)
         alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
+    }
+    
+    func updateUserDataAndShowHomeController(uid: String, values: [String:Any]){
+        
+        REF_USERS.child(uid).updateChildValues(values) { error, ref in
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController else {
+                return
+            }
+            controller.configureUI()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

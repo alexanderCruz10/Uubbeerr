@@ -17,6 +17,9 @@
 		3534922F28CD788D009D3668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3534922D28CD788D009D3668 /* LaunchScreen.storyboard */; };
 		3534923D28CD7EA3009D3668 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534923C28CD7EA3009D3668 /* LoginController.swift */; };
 		356B6F3928CFFF1F00181DD0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3828CFFF1F00181DD0 /* HomeController.swift */; };
+		356B6F3B28D0119900181DD0 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3A28D0119900181DD0 /* LocationInputActivationView.swift */; };
+		356B6F3D28D01C2900181DD0 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3C28D01C2900181DD0 /* LocationInputView.swift */; };
+		356B6F3F28D026F500181DD0 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6F3E28D026F500181DD0 /* LocationCell.swift */; };
 		3583594B28CFF58700D6C597 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3583594A28CFF58700D6C597 /* GoogleService-Info.plist */; };
 		38920C6186003C104D426DD9 /* Pods_Uubbeerr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370F1B78B24C4C2D39BE107C /* Pods_Uubbeerr.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,9 @@
 		3534923028CD788D009D3668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3534923C28CD7EA3009D3668 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		356B6F3828CFFF1F00181DD0 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		356B6F3A28D0119900181DD0 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
+		356B6F3C28D01C2900181DD0 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
+		356B6F3E28D026F500181DD0 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		3583594A28CFF58700D6C597 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		370F1B78B24C4C2D39BE107C /* Pods_Uubbeerr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uubbeerr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CEFA83441037EA5BD7F547 /* Pods-Uubbeerr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uubbeerr.debug.xcconfig"; path = "Target Support Files/Pods-Uubbeerr/Pods-Uubbeerr.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				35031E4628CEAC3A000C2948 /* AuthButton.swift */,
+				356B6F3A28D0119900181DD0 /* LocationInputActivationView.swift */,
+				356B6F3C28D01C2900181DD0 /* LocationInputView.swift */,
+				356B6F3E28D026F500181DD0 /* LocationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,10 +274,13 @@
 				3534923D28CD7EA3009D3668 /* LoginController.swift in Sources */,
 				35031E4728CEAC3A000C2948 /* AuthButton.swift in Sources */,
 				356B6F3928CFFF1F00181DD0 /* HomeController.swift in Sources */,
+				356B6F3D28D01C2900181DD0 /* LocationInputView.swift in Sources */,
 				3534922328CD788C009D3668 /* AppDelegate.swift in Sources */,
 				3534922528CD788C009D3668 /* SceneDelegate.swift in Sources */,
 				35031E4528CE98E9000C2948 /* Extensions.swift in Sources */,
+				356B6F3B28D0119900181DD0 /* LocationInputActivationView.swift in Sources */,
 				35031E4928CEB6D7000C2948 /* SignUpController.swift in Sources */,
+				356B6F3F28D026F500181DD0 /* LocationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import Firebase
 import MapKit
 
 private let resuseIdentifer = "LocationCell"
+private let annotationIdentifer = "DriverAnno"
 
 class HomeController: UIViewController{
     
@@ -33,12 +34,42 @@ class HomeController: UIViewController{
         checkIfUserIsLoggedIn()
         enableLocationService()
         fetchUserData()
-        signOut()
+        fetchDrviers()
+        //signOut()
     }
     
     func fetchUserData(){
-        Service.shared.fetchData { user in
+        
+        guard let currentuid = Auth.auth().currentUser?.uid else {return}
+        Service.shared.fetchUserData(currentUid: currentuid) { user in
             self.user = user
+        }
+    }
+    
+    func fetchDrviers(){
+        
+        guard let location = locationManager?.location else {return }
+        Service.shared.fetchDrivers(location: location) { driver in
+            guard let coordinate = driver.location?.coordinate else{ return}
+            let annotation = DriverAnnotation(uid: driver.uid, coordinate: coordinate)
+            
+            var driverIsVisble: Bool{
+                return self.mapView.annotations.contains { annotation in
+                    guard let driveranno = annotation as? DriverAnnotation else{
+                        return false
+                    }
+                    
+                    if driveranno.uid == driver.uid{
+                        driveranno.updateAnnotationUpdate(withCoordinate: coordinate)
+                        return true
+                    }
+                    return false
+                }
+            }
+            
+            if !driverIsVisble{
+                self.mapView.addAnnotation(annotation)
+            }
         }
     }
     func checkIfUserIsLoggedIn(){
@@ -92,6 +123,7 @@ class HomeController: UIViewController{
         mapView.frame = view.frame
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
+        mapView.delegate = self
     }
     
     func configureLocationInputView(){
@@ -151,6 +183,17 @@ extension HomeController: CLLocationManagerDelegate{
     
 }
 
+extension HomeController: MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if let annotation = annotation as? DriverAnnotation{
+            let view = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifer)
+            view.image = UIImage(imageLiteralResourceName: "chevron-sign-to-right")
+            return view
+        }
+        return nil
+    }
+}
 extension HomeController: LocationInputActivationViewDelegate{
     
     func presentLocationInputView() {

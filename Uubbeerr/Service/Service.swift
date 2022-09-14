@@ -6,6 +6,8 @@
 //
 
 import Firebase
+import CoreLocation
+import GeoFire
 
 let DB_REF = Database.database().reference()
 let REF_USERS = DB_REF.child("users")
@@ -16,18 +18,31 @@ struct Service{
     static let shared = Service()
    
     
-    func fetchData(completion: @escaping (User) -> Void) {
-        guard let currentuid = Auth.auth().currentUser?.uid else {return}
+    func fetchUserData(currentUid: String, completion: @escaping (User) -> Void) {
         
-        REF_USERS.child(currentuid).observe(.value) { snapshot in
+        REF_USERS.child(currentUid).observeSingleEvent(of: .value) { snapshot in
             guard let dictionary = snapshot.value as? [String:Any] else { return }
-           
-            let user = User(dictionary: dictionary)
             
-            print("DEBUG: User email is: \(user.email)")
-            print("DEBUG: User email is: \(user.fullName)")
+            let uid = snapshot.key
+            let user = User(uid: uid, dictionary: dictionary)
             
             completion(user)
         }
     }
+    
+    func fetchDrivers(location: CLLocation, completion: @escaping(User) -> Void){
+        
+        let geoFire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
+        
+        REF_DRIVER_LOCATIONS.observe(.value) { (snapshot) in
+            geoFire.query(at: location, withRadius: 50).observe(.keyEntered, with: { (uid, location) in
+                Service.shared.fetchUserData(currentUid: uid, completion: { (user) in
+                    var driver = user
+                    driver.location = location
+                    completion(driver)
+                })
+            })
+        }
+    }
 }
+

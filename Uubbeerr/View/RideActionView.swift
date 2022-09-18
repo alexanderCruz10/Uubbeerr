@@ -8,6 +8,10 @@
 import UIKit
 import MapKit
 
+protocol RideActionViewDelegate{
+    func uploadTrip(_ view: RideActionView)
+}
+
 class RideActionView: UIView {
     
     var destination: MKPlacemark? {
@@ -16,7 +20,9 @@ class RideActionView: UIView {
             addressLabel.text = destination?.address
         }
     }
-
+    
+    var delegate: RideActionViewDelegate?
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
@@ -109,6 +115,6 @@ class RideActionView: UIView {
     }
     
     @objc func actionButtonPresssed(){
-        print("DEBUG: 123")
+        delegate?.uploadTrip(self)
     }
 }

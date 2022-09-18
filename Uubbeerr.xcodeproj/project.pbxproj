@@ -11,6 +11,8 @@
 		35031E4728CEAC3A000C2948 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35031E4628CEAC3A000C2948 /* AuthButton.swift */; };
 		35031E4928CEB6D7000C2948 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35031E4828CEB6D7000C2948 /* SignUpController.swift */; };
 		350327A628D660C600009B1E /* RideActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350327A528D660C600009B1E /* RideActionView.swift */; };
+		350327A828D68FA700009B1E /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350327A728D68FA700009B1E /* Trip.swift */; };
+		350327AA28D6AEDC00009B1E /* PickUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350327A928D6AEDC00009B1E /* PickUpController.swift */; };
 		3534922328CD788C009D3668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534922228CD788C009D3668 /* AppDelegate.swift */; };
 		3534922528CD788C009D3668 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534922428CD788C009D3668 /* SceneDelegate.swift */; };
 		3534922A28CD788C009D3668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3534922828CD788C009D3668 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		35031E4628CEAC3A000C2948 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		35031E4828CEB6D7000C2948 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		350327A528D660C600009B1E /* RideActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideActionView.swift; sourceTree = "<group>"; };
+		350327A728D68FA700009B1E /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		350327A928D6AEDC00009B1E /* PickUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpController.swift; sourceTree = "<group>"; };
 		3534921F28CD788C009D3668 /* Uubbeerr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uubbeerr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3534922228CD788C009D3668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3534922428CD788C009D3668 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				3534923C28CD7EA3009D3668 /* LoginController.swift */,
 				35031E4828CEB6D7000C2948 /* SignUpController.swift */,
 				356B6F3828CFFF1F00181DD0 /* HomeController.swift */,
+				350327A928D6AEDC00009B1E /* PickUpController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			children = (
 				356B6F4228D043AF00181DD0 /* User.swift */,
 				356B6F4628D1754F00181DD0 /* DriverAnnotation.swift */,
+				350327A728D68FA700009B1E /* Trip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,8 +296,10 @@
 				35031E4728CEAC3A000C2948 /* AuthButton.swift in Sources */,
 				356B6F3928CFFF1F00181DD0 /* HomeController.swift in Sources */,
 				356B6F3D28D01C2900181DD0 /* LocationInputView.swift in Sources */,
+				350327A828D68FA700009B1E /* Trip.swift in Sources */,
 				356B6F4728D1754F00181DD0 /* DriverAnnotation.swift in Sources */,
 				3534922328CD788C009D3668 /* AppDelegate.swift in Sources */,
+				350327AA28D6AEDC00009B1E /* PickUpController.swift in Sources */,
 				3534922528CD788C009D3668 /* SceneDelegate.swift in Sources */,
 				35031E4528CE98E9000C2948 /* Extensions.swift in Sources */,
 				356B6F4528D049D200181DD0 /* LocationHandler.swift in Sources */,

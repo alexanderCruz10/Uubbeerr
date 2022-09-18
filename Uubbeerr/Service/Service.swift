@@ -69,8 +69,12 @@ struct Service{
         }
     }
     
-    func acceptTrip(trip: Trip){
+    func acceptTrip(trip: Trip, completion: @escaping(Error?, DatabaseReference) -> Void){
         
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let values = ["driverUid": uid,
+                      "State": TripState.accepted.rawValue] as [String : Any]
+        REF_TRIPS.child(trip.passengerUid).updateChildValues(values, withCompletionBlock: completion)
     }
 }
 

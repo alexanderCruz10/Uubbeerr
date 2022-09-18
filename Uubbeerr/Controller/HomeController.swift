@@ -57,6 +57,7 @@ class HomeController: UIViewController{
             }
             let controller = PickUpController(trip: trip)
             controller.modalPresentationStyle = .fullScreen
+            controller.delegate = self
             self.present(controller, animated: true, completion: nil)
             
         }
@@ -78,6 +79,12 @@ class HomeController: UIViewController{
         //signOut()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        guard let trip = trip else {
+            return
+        }
+        print("DEBUG: trip state is: \(trip.state)")
+    }
     //MARK: - Seleectors
     
     @objc func actionButtonPressed(){
@@ -459,4 +466,14 @@ extension HomeController: RideActionViewDelegate{
             print("DEBUG: Did upload trip coordinates")
         }
     }
+}
+
+extension HomeController: PickUpControllerDelegate{
+    
+    func didAcceptTrip(_ trip: Trip) {
+        self.trip?.state = .accepted
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
